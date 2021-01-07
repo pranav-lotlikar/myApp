@@ -68,3 +68,110 @@ Changes to be committed:
 Pranav@LAPTOP-G15TL4CP MINGW64 ~/Desktop/myApp (master)
 $ touch git_commands.txt				-- to add all files to repo
 
+
+
+Pranav@LAPTOP-G15TL4CP MINGW64 ~/Desktop/myApp (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   app.js
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Pranav@LAPTOP-G15TL4CP MINGW64 ~/Desktop/myApp (master)
+$ git add .
+
+Pranav@LAPTOP-G15TL4CP MINGW64 ~/Desktop/myApp (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   app.js
+
+
+Pranav@LAPTOP-G15TL4CP MINGW64 ~/Desktop/myApp (master)
+$ git commit
+Aborting commit due to empty commit message.
+
+Pranav@LAPTOP-G15TL4CP MINGW64 ~/Desktop/myApp (master)
+$ git commit -m 'Changed app.js'
+[master fd7e87b] Changed app.js
+ 1 file changed, 1 insertion(+)
+
+Pranav@LAPTOP-G15TL4CP MINGW64 ~/Desktop/myApp (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Pranav@LAPTOP-G15TL4CP MINGW64 ~/Desktop/myApp (master)
+$ touch .gitignore
+
+Pranav@LAPTOP-G15TL4CP MINGW64 ~/Desktop/myApp (master)
+$ touch log.txt
+
+Pranav@LAPTOP-G15TL4CP MINGW64 ~/Desktop/myApp (master)
+$ git add .
+
+Pranav@LAPTOP-G15TL4CP MINGW64 ~/Desktop/myApp (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   .gitignore
+
+
+Pranav@LAPTOP-G15TL4CP MINGW64 ~/Desktop/myApp (master)
+$ git add .
+
+Pranav@LAPTOP-G15TL4CP MINGW64 ~/Desktop/myApp (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   .gitignore
+        new file:   dir1/app1.js
+
+
+Pranav@LAPTOP-G15TL4CP MINGW64 ~/Desktop/myApp (master)
+$ git branch login
+
+Pranav@LAPTOP-G15TL4CP MINGW64 ~/Desktop/myApp (master)
+$ git commit -m 'another change'
+[master 30e6a16] another change
+ 2 files changed, 3 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 dir1/app1.js
+
+Pranav@LAPTOP-G15TL4CP MINGW64 ~/Desktop/myApp (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Pranav@LAPTOP-G15TL4CP MINGW64 ~/Desktop/myApp (master)
+$ git checkout login
+Switched to branch 'login'
+
+Pranav@LAPTOP-G15TL4CP MINGW64 ~/Desktop/myApp (login)
+$ git status
+On branch login
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        dir2/
+        log.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Pranav@LAPTOP-G15TL4CP MINGW64 ~/Desktop/myApp (login)
+$ git checkout master
+Switched to branch 'master'
+
+Pranav@LAPTOP-G15TL4CP MINGW64 ~/Desktop/myApp (master)
+$ git checkout login
+Switched to branch 'login'
+
+Pranav@LAPTOP-G15TL4CP MINGW64 ~/Desktop/myApp (login)
+$
+
+
